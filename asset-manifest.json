@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gh-dashboard/static/css/main.1a8aba3e.css",
+    "main.js": "/gh-dashboard/static/js/main.94609d54.js",
+    "index.html": "/gh-dashboard/index.html",
+    "main.1a8aba3e.css.map": "/gh-dashboard/static/css/main.1a8aba3e.css.map",
+    "main.94609d54.js.map": "/gh-dashboard/static/js/main.94609d54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a8aba3e.css",
+    "static/js/main.94609d54.js"
+  ]
+}
