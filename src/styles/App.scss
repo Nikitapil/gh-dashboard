@@ -1,0 +1,179 @@
+@import "./nullstyle.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background: #cdd9e5;
+  color: #2d333b;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  min-height: 60px;
+  background-color: #2d333b;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  .header__title {
+    font-size: 20px;
+    color: #cdd9e5;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.4s;
+    &:hover {
+      color: #cdd9e5bc;
+    }
+  }
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.repository-form {
+  display: flex;
+  gap: 12px;
+}
+.repository-form__input {
+  padding: 3px 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  &:focus {
+    outline: 1px solid #2d333b;
+  }
+}
+.repository-form__submit {
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: none;
+  background: #2d333b;
+  color: #cdd9e5;
+  transition: 0.4s;
+  &:hover {
+    background: #31343736;
+    color: #2d333b;
+  }
+}
+.repository-table {
+  // border-collapse: collapse;
+
+  .repository-table__cell {
+    padding: 5px 10px;
+    border: 2px solid #2d333b;
+  }
+  thead {
+    border-radius: 5px;
+  }
+  .repository-table__cell_header {
+    font-weight: 700;
+    background-color: #2d333b;
+    color: #cdd9e5;
+    position: relative;
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      width: 2px;
+      height: 100%;
+      background-color: #cdd9e5;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination__arrow {
+  border: none;
+  background: none;
+  color: #2d333b;
+  font-size: 20px;
+}
+
+.pagination__page {
+  background: none;
+  border: none;
+  color: #2d333b;
+  &.current {
+    color: #ff0000;
+  }
+}
+
+.pagination__body {
+  display: flex;
+  gap: 5px;
+}
+
+.single-repo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.single-repo__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.single-repo__avatar {
+  max-width: 200px;
+  img {
+    max-width: 100%;
+  }
+}
+.single-repo__body {
+  display: flex;
+  gap: 15px;
+}
+
+.repo-link {
+  color: #2d333b;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  &:hover {
+    color: #5a5afb;
+  }
+}
+
+.single-repo__info {
+  line-height: 150%;
+}
+
+.repo-info__title {
+  font-weight: 700;
+}
+
+@media (max-width: 435px) {
+  .repository-table {
+    font-size: 12px;
+  }
+  .repository-table__cell {
+    padding: 5px;
+  }
+}
